@@ -1,0 +1,10 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <h2>{{ search_title }}</h2>
+  {% for post in posts %}
+    {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+  {% else %}
+    <h3>Search turned up empty.  Try again? </h3>
+  {% endfor %}
+{% endblock %}

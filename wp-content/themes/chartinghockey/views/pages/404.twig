@@ -1,0 +1,56 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+  <section class="gc-hero gc-hero-slim  gc-hero-slim-remove-border">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-hero-content">
+        {% if options.error_hero_content is not empty %}
+        {{ options.error_hero_content }}
+        {% endif %}
+      </div>
+        <div class="gc-hero-image gc-hero-slim-image">
+          <img src="{{theme.link}}/assets/images/eyes-circles@2x.png" alt="two grahpic eyeballs with circles" style="max-width:450px" />
+        </div>
+    </div>
+  </div>
+</section>
+<section class="gc-text-info">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-text-info-left">
+          {% if options.error_main_content is not empty %}
+          {{ options.error_main_content }}
+          {% endif %}
+      </div>
+      <div class="gc-text-info-right">
+          {% if options.error_sidebar_content is not empty %}
+          {{ options.error_sidebar_content }}
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gc-logo-cta gc-logo-cta-blue">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-logo-cta-left">
+          {% if options.call_out_content is not empty %}
+          {{ options.call_out_content }}
+          {% endif %}
+      </div>
+      <div class="gc-logo-cta-right">
+        <div class="gc-logo-cta-buttons">
+            {% if options.pricing_button %}
+            <a href="{{options.pricing_button.url}}" {{options.pricing_button.target}} class="gc-button gc-button-white gc-button-white-medium">{{options.pricing_button.text}}</a>
+            {% endif %}
+            {% if options.sales_button %}
+            <a href="{{options.sales_button.url}}" {{options.sales_button.target}} class="gc-button gc-button-green gc-button-green-medium">{{options.sales_button.text}}</a>
+            {% endif %}
+            <p>{{ options.short_description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="gc-logo-cta-logo"><img src="{{theme.link}}/assets/images/sengc-logo-icon@2x.png" alt="logo for sensu" /></div>
+  </div>
+</section>
+{% endblock %}

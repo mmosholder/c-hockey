@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "foldero": "^0.1.1",
+    "jquery": "^3.3.1",
+    "js-yaml": "^3.9.1",
+    "laravel-mix": "^2.0.0",
+    "lodash": "^4.17.10",
+    "plyr": "^3.4.3",
+    "stylelint": "^9.4.0",
+    "stylelint-webpack-plugin": "^0.10.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "browser-sync-webpack-plugin": "^2.0.1"
+  }
+}

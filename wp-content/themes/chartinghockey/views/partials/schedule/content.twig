@@ -1,0 +1,15 @@
+<div class="gc-tabbed-content">
+  {% include 'partials/schedule/tabs.twig' %}
+  {% for event in item.event_content %}
+  <div id="tab{{ event.content_id }}" class="gc-tabbed-content-card {% if loop.first %}-active{% endif %}">
+    <div class="gc-tabbed-content-container">
+      <div class="gc-row">
+        <div class="gc-heading-col">
+          <h3>{{ event.event_day }}</h3>
+        </div>
+      </div>
+      {% include 'partials/schedule/time-slot.twig' %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

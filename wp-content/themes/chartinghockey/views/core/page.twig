@@ -1,0 +1,30 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+  {% for item in post.get_field('layout') %}
+    {% if item.acf_fc_layout == 'hero_bg' %}
+      {% include 'components/hero_bg.twig' %}
+    {% elseif item.acf_fc_layout == 'hero_full_bg' %}
+      {% include 'components/hero_bg.twig' %}
+    {% elseif item.acf_fc_layout == 'events_schedule' %}
+      {% include 'components/schedule.twig' %}
+    {% elseif item.acf_fc_layout == 'text_button_cta' %}
+      {% include 'components/text-button-cta.twig' %}
+    {% elseif item.acf_fc_layout == 'text_image_block' %}
+      {% include 'components/text-image.twig' %}
+    {% elseif item.acf_fc_layout == 'speakers_list' %}
+      {% include 'components/speakers-list-new.twig' %}
+    {% elseif item.acf_fc_layout == 'sponsor_logos' %}
+      {% include 'components/sponsor-logos.twig' %}
+    {% elseif item.acf_fc_layout == 'faq' %}
+      {% include 'components/faq.twig' %}
+    {% elseif item.acf_fc_layout == 'newsletter_cta' %}
+      {% include 'components/newsletter-cta.twig' %}
+    {% elseif item.acf_fc_layout == 'cards' %}
+      {% include 'components/cards.twig' %}
+    {% elseif item.acf_fc_layout == 'registration_embed' %}
+      {% include 'components/registration-embed.twig' %}
+    {% elseif item.acf_fc_layout == 'three_col_blocks' %}
+      {% include 'components/three-col-blocks.twig' %}
+    {% endif %}
+  {% endfor %}
+{% endblock %}

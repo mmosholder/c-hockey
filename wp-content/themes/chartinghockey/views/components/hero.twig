@@ -1,0 +1,7 @@
+{% if item.hero_size == 'Large' %}
+  {% include 'components/hero/hero_large.twig' %}
+{% elseif item.hero_size == 'Card' %}
+  {% include 'components/hero/hero_card.twig' %}
+{% else %}
+  {% include 'components/hero/hero_small.twig' %}
+{% endif %}

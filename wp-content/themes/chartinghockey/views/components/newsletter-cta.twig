@@ -1,0 +1,24 @@
+<section class="gc-community-cta" {{ add_top_border_speaker == false ? 'style="padding-top:0;"' : '' }}>
+  <div class="gc-container">
+    <div class="gc-row {{ (item.add_top_border == true ) ? 'border-top' : 'no-border' }}">
+      <div class="gc-community-cta-left">
+        {% if item.cta_title is not empty %}
+          <h3 class="gc-community-cta-title">{{ item.cta_title }}</h2>
+        {% endif %}
+        {% if item.cta_desc is not empty %}
+          <p class="gc-community-cta-copy">{{ item.cta_desc }}</p>
+        {% endif %}
+      </div>
+      <div class="gc-community-cta-right">
+        <div class="gc-community-cta-input-group">
+          <div id="mc_embed_signup">
+              <form action="//heavywater.us6.list-manage.com/subscribe/post?u=576e632588&amp;amp;id=2e5efd43d8" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+                <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your Email" class="gc-input">
+                <button class="gc-button" type="submit" id="mce-embedded-subscribe">Sign Up!</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

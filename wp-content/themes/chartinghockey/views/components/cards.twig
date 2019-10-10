@@ -1,0 +1,16 @@
+<section class="gc-cards">
+  <div class="gc-container">
+    <div class="gc-row">
+      {% for card in item.cards %}
+        {% set card_image = TimberImage(card.card_image).src|resize(500, 295) %}
+        <div class="gc-cards-item">
+          <img src="{{ card_image }}" alt="{{ card.card_title.text }}">
+          <h3><a href="{{ card.card_title.url }}">{{ card.card_title.text }}</a></h3>
+          <p>{{ card.card_text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{# {{ item | print_r }} #}
+

@@ -1,0 +1,40 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+
+<section class="gc-hero gc-hero-slim gc-hero-slim-blue gc-hero-slim-remove-border">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-hero-content">
+          <h1>All {{ archive_year }} Talks</h1>
+          <p>All the talks for {{ archive_year }}.</p>
+      </div>
+        <div class="gc-hero-image gc-hero-slim-image">
+          <img src="{{theme.link}}/assets/images/eye-circle@2x.png" alt="Monitoring with Sensu provides total visibility into your infrastructure" style="max-width:420px" />
+        </div>
+    </div>
+  </div>
+</section>
+<section class="gc-columns -white-bg">
+  <div class="gc-container">
+    <div class="gc-row">
+      {% for post in posts %}
+        {% set youtube_id = post.get_field('youtube_id') %}
+        {% set desc = post.get_field('talk_description') %}
+
+        <div class="gc-recent-talks-item">
+          <div class="plyr__video-embed su_recent_talk_video">
+              <iframe src="https://www.youtube.com/embed/{{ youtube_id }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+          </div>
+          <h4>{{ desc }}</h4>
+        </div>
+        {# <pre>
+        {{ dump(post) }}
+        </pre> #}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

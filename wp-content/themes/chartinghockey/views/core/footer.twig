@@ -1,0 +1,39 @@
+<footer class="gc-footer fill-footer xs-pt-20 xs-pb-30 sm-pt-50 sm-pb-50">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-col-xs-12 gc-col-sm-6 gc-col-md-4">
+        <a href="/" class="link-logo">
+          <div class="flex logo-desktop align-center">
+            <img src="{{theme.link}}/assets/images/gc-box@2x.png" alt="Gup's Corner Box Logo">
+            <p class="title-logo text-white sm-ml-10">Gup's Corner</p>
+          </div>
+        </a>
+        <p class="text-14 text-white xs-mt-20">Words about us and our mission statement go here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi quasi voluptatum dolorum aliquid?</p>
+        {# {{footer_about}} #}
+        <div class="gc-footer-left-bottom">
+          <div class="gc-row">
+            <div class="-bottom-nav">
+              {{ footer1 }}
+            </div>
+            <div class="-bottom-nav">
+              {{ footer2 }}
+            </div>
+            <div class="-bottom-nav">
+              {{ footer3 }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gc-footer-right">
+        {{ footer_git }}
+        {{ footer_sm }}
+        <div class="gc-footer-right-info">
+          {{ footer_community }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gc-footer-bottom">
+    {{ footer_base }}
+  </div>
+</footer>

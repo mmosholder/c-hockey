@@ -1,0 +1,34 @@
+<section class="gc-summit-faq">
+  <div class="gc-container">
+    <div class="gc-row">
+      <section class="gc-text-info">
+        <div class="gc-container">
+          <div class="gc-row">
+            <div class="gc-markdown-content">
+              {% for item in item.faq_content %}
+                <h2>{{ item.faq_question }}</h2>
+                {{ item.faq_answer }}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gc-sidebar">
+        <div class="gc-sidebar-content">
+          <div class="gc-container">
+          <div class="gc-row">
+            <div class="gc-summit-sidebar">
+              {% if item.sidebar_title %}
+              <h2>{{ item.sidebar_title }}</h2>
+              {% endif %}
+              {% if item.sidebar_content %}
+              <p>{{ item.sidebar_content }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

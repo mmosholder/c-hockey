@@ -1,0 +1,30 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+<section class="gc-hero gc-hero-slim gc-hero-slim-blue gc-hero-slim-remove-border">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-hero-content">
+          <h1>{{options.speakers_archive_hero_title}}</h1>
+          <p>{{options.speakers_archive_hero_desc}}</p>
+      </div>
+        <div class="gc-hero-image gc-hero-slim-image">
+          <img src="http://gc.local/wp-content/uploads/2018/08/eye-circle@2x-f4753198.png" alt="Monitoring with Sensu provides total visibility into your infrastructure" style="max-width:420px" />
+        </div>
+    </div>
+  </div>
+</section>
+<section class="gc-columns -white-bg">
+  <div class="gc-container">
+    <div class="gc-row">
+      {% for post in posts %}
+        <div class="gc-columns-col">
+          <img src="{{TimberImage(post.speaker_profile_image)}}" width="140" class="col-icon col-icon-profile" />
+          <h3>{{post.title}}</h3>
+          <p>{{ post.speaker_desc | excerpt(20)}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

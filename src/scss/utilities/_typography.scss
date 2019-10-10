@@ -1,0 +1,148 @@
+// Typography base text & title classes
+// ------------------------------------
+
+.title {
+
+  &-1 {
+    @include discount-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 30px,
+      992px: 50px,
+      1200px: 58px
+    );
+    line-height: 1.1;
+    letter-spacing: 0.4px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-logo {
+    @include discount-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 26px,
+      992px: 36px
+    );
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+}
+
+.text {
+
+  &-20 {
+    @include plex-regular;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 20px
+    );
+    line-height: 1.25;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-14 {
+    @include plex-regular;
+    @include font-smoothing;
+    $map: (
+      576px: 12px,
+      992px: 14px
+    );
+    line-height: 1.25;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-button {
+    @include discount-bold;
+    @include font-smoothing;
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+}
+
+.link {
+
+  &-logo {
+    text-decoration: none;
+  }
+}
+
+// Typography Emphasis and Styling
+// -------------------------
+
+.italic {
+  font-style: italic;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.decoration-underline {
+  text-decoration: underline;
+}
+
+.decoration-line-through {
+  text-decoration: line-through;
+}
+
+// Typography Alignment
+// -------------------------
+
+.text-center {
+  text-align: center;
+}
+
+// Text center
+@include generate-breakpoint-prefixes {
+
+  &text-center {
+    text-align: center;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+//text left
+@include generate-breakpoint-prefixes {
+
+  &text-left {
+    text-align: left;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+// List styles
+// -------------------------
+// Unstyled keeps list items block level,
+// just removes default browser padding and list-style
+
+.list-unstyled {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-flex {
+  display: flex;
+}
+
+
+.pointer {
+  cursor: pointer;
+}

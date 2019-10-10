@@ -1,0 +1,81 @@
+<section class="gc-hero gc-hero-card">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-hero-content">
+        {% if item.hero_title is not empty %}
+        <h1>{{ item.hero_title }}</h1>
+        {% endif %}
+
+        {% if item.hero_text is not empty %}
+        <p>{{ item.hero_text }}</p>
+        {% endif %}
+
+          <div class="gc-hero-content-card">
+
+            {% if item.hero_card_title %}
+              <h2>{{ item.hero_card_title }}</h2>
+            {% endif %}
+
+            {% if item.hero_card_text %}
+            <p class="card-subtext">{{ item.hero_card_text }}</p>
+            {% endif %}
+
+            {% if item.hero_card_button %}
+            <a href="{{item.hero_card_button.url}}" {{item.hero_card_button.target}} class="gc-button gc-button-green gc-button-green-large">{{item.hero_card_button.text}}</a>
+            {% endif %}
+
+          </div>
+      </div>
+
+        <div class="gc-hero-image gc-hero-card-image">
+           <img src="{{TimberImage(item.hero_image).src}}" alt="{{item.hero_image.alt}}" style="max-width:585px"/>
+        </div>
+
+    </div>
+  </div>
+</section>
+<div class="gc-hero-spacer"></div>
+
+
+{# <section class="gc-hero gc-hero-card">
+  <div class="gc-container">
+    <div class="gc-row">
+      <div class="gc-hero-content">
+
+      {% if item.hero_title is not empty %}
+        <h1>{{ item.hero_title }}</h1>
+      {% endif %}
+
+      {% if item.hero_text is not empty %}
+      <p>{{ item.hero_text }}</p>
+      {% endif %}
+
+        <div class="gc-hero-content-card">
+
+            {% if item.hero_card_title %}
+              <h2>{{ item.hero_card_title }}</h2>
+            {% endif %}
+
+            {% if item.hero_card_text %}
+            <p class="card-subtext">{{ item.hero_card_text }}</p>
+            {% endif %}
+
+            {% if item.hero_card_button %}
+            <a href="{{item.hero_card_button.url}}" {{item.hero_card_button.target}} class="gc-button gc-button-green gc-button-green-large">{{item.hero_card_button.text}}</a>
+            {% endif %}
+
+          </div>
+      </div>
+
+      {% if item.hero_image is not empty %}
+        <div class="gc-hero-image gc-hero-card-image">
+          <img src="{{TimberImage(item.hero_image).src}}" alt="{{item.hero_image.alt}}" style="max-width:585px"/>
+        </div>
+      {% endif %}
+
+
+    </div>
+  </div>
+</section>
+<div class="gc-hero-spacer"></div>
+ #}
