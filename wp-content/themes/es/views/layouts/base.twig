@@ -1,0 +1,21 @@
+{% block html_head_container %}
+    {% include 'html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+</head>
+{% endblock %}
+</head>
+<body class="fill-body">
+{% include 'core/grid.twig' %}
+{% include 'core/nav.twig' %}
+<main {{ (options.notification != '' ? 'style="margin-top:30px"' : '') }} >
+{% block content %}
+<!-- The template’s main content will go here. -->
+{% endblock %}
+</main>
+{% block footer %}
+    {% include 'core/footer.twig' %}
+{% endblock %}
+{{ wp_footer }}
+</body>
+</html>

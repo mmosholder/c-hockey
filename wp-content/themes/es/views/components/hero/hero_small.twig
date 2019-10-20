@@ -1,0 +1,20 @@
+<section class="ch-hero ch-hero-slim ch-hero-slim-blue ch-hero-slim-remove-border">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-hero-content">
+
+          {% if item.hero_title is not empty %}
+          <h1>{{ item.hero_title }}</h1>
+          {% endif %}
+
+          {% if item.hero_text is not empty %}
+          <p>{{ item.hero_text }}</p>
+          {% endif %}
+
+      </div>
+        <div class="ch-hero-image ch-hero-slim-image">
+          <img src="{{ TimberImage(item.hero_image).src }}" alt="Monitoring with Sensu provides total visibility into your infrastructure" style="max-width:{{ item.hero_image_size }}px" />
+        </div>
+    </div>
+  </div>
+</section>

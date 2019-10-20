@@ -1,0 +1,44 @@
+<footer class="ch-footer">
+  <div class="ch-nav-container">
+
+      <div class="ch-footer-wrapper ch-span-xs-6 xs-pt-20 sm-pt-50">
+        <div class="ch-row">
+          <div class="ch-col-xs-6 ch-col-sm-3 ch-col-md-2">
+
+              <a href="/" class="link-logo">
+                <div class="flex logo-desktop align-center">
+                  <img src="{{theme.link}}/library/images/ch-logo@2x.png" alt="Charting Hockey Logo">
+                </div>
+              </a>
+            {# <p class="text-16 text-dark xs-mt-20">This is the footer and it's definitely not done. Words about Charting Hockey go Here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi quasi voluptatum dolorum aliquid?</p> #}
+            {# {{footer_about}} #}
+          </div>
+          <div class="ch-col-xs-6 ch-col-sm-3 ch-col-md-4 flex flex-column flex-wrap align-flex-start">
+            <ul class="list-unstyled ch-footer-links">
+            {% for item in menu.items %}
+              <li class="xs-mt-10 xs-mb-10"><a class="link-nav" href="{{item.link}}">{{item.title}}</a></li>
+            {% endfor %}
+              <li class="xs-mt-10 xs-mb-10"><a href="https://twitter.com/ChartingHockey" target="_blank" class="link-footer-nav">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="30px" height="25px" viewBox="0 0 30 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                    <title>Path</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Twitter_Logo_Blue" transform="translate(-75.000000, -98.000000)" fill="#3B3B3B" fill-rule="nonzero">
+                            <path d="M84.4344,122.827073 C95.7552,122.827073 101.9472,113.447873 101.9472,105.314273 C101.9472,105.047873 101.9472,104.782673 101.9292,104.518673 C103.133798,103.647366 104.173627,102.568528 105,101.332673 C103.876655,101.830435 102.684995,102.156867 101.4648,102.301073 C102.749693,101.531851 103.711348,100.321999 104.1708,98.8966725 C102.962589,99.6136189 101.640775,100.118887 100.2624,100.390673 C98.3544993,98.3619457 95.3228632,97.8654076 92.8674591,99.1794884 C90.412055,100.493569 89.14353,103.291463 89.7732,106.004273 C84.8242749,105.756172 80.2133709,103.41866 77.088,99.5734725 C75.4543473,102.385846 76.2887855,105.983704 78.9936,107.789873 C78.0140894,107.760842 77.0559352,107.496608 76.2,107.019473 C76.2,107.044673 76.2,107.071073 76.2,107.097473 C76.2008018,110.027384 78.2661018,112.550915 81.138,113.131073 C80.2318435,113.378201 79.2810967,113.414326 78.3588,113.236673 C79.1651375,115.74398 81.4758895,117.461613 84.1092,117.511073 C81.929682,119.223991 79.2372714,120.153866 76.4652,120.151073 C75.9754843,120.150132 75.4862449,120.120482 75,120.062273 C77.8147631,121.868604 81.0898961,122.826733 84.4344,122.822273" id="Path"></path>
+                        </g>
+                    </g>
+                </svg>
+                @ChartingHockey
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    {# </div> #}
+  </div>
+  <div class="ch-footer-bottom xs-pt-10 xs-pb-10">
+    <p class="text-14-bold text-dark text-center">&copy; {{ now|date('Y') }}</p>
+  </div>
+</footer>

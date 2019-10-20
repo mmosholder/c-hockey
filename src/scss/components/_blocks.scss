@@ -1,0 +1,30 @@
+.ch-blocks {
+
+  &-block {
+    text-decoration: none;
+
+    h2,
+    p {
+      color: $fill-black;
+    }
+
+    &:hover {
+
+      .button-gradient {
+        color: $fill-white;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+  }
+}

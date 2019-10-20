@@ -70,7 +70,8 @@ Thumbs.db
 !vagrantfile
 !vagrant/
 !src/
-!webpack.mix.js
+!webpack.mix.json
+!
 
 # track favicon files, if they exist
 !android-chrome-*.png
@@ -90,4 +91,4 @@ Thumbs.db
 !wp-content/plugins/classic-editor/
 !wp-content/plugins/timber-library/
 !wp-content/plugins/wp-nested-pages/
-!wp-content/themes/chartinghockey/
+!wp-content/themes/es/

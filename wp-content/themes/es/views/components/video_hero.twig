@@ -1,0 +1,24 @@
+<section class="ch-hero ch-hero-video-bg">
+  <div class="ch-container">
+    <div class="ch-row">
+    <div class="ch-col-sm-6 ch-span-xs-6 ch-span-sm-0">
+      <div class="ch-hero-video">
+        <div class="ch-row">
+          <div class="ch-col-xs-6">
+            <h1 class="title-1 text-yellow xs-pl-10 xs-pr-10 md-pl-0 md-pr-60">{{ item.hero_title }}</h1>
+            {# <p class="text-18 text-white">{{ item.hero_text }}</p>
+            <a href="{{ item.hero_button.url }}" class="xs-mt-50 button button-large button-teal text-button text-white">{{ item.hero_button.text }}</a> #}
+          </div>
+        </div>
+        <div class="ch-video">
+          <img class="ch-video-mobile" src="{{ TimberImage(item.video_hero_poster).src }}" alt="">
+          <video class="ch-video-embed" poster="{{TimberImage(item.video_hero_poster).src}}">
+            <source src="{{ item.video_hero_video }}" type="video/mp4"></source>
+          </video>
+        </div>
+        <div class="ch-hero-bg-filter1"></div>
+        <div class="ch-hero-bg-filter2"></div>
+        </div>
+    </div>
+  </div>
+</section>

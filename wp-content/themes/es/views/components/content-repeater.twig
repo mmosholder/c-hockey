@@ -1,0 +1,20 @@
+<div class="ch-blocks xs-pt-50 xs-pb-50">
+  <div class="ch-container">
+    <div class="ch-row">
+      {% for block in item.blocks %}
+      <a href="{{ block.link.url }}" {{ block.link.target }} class="ch-blocks-block ch-col-xs-6 ch-col-sm-3 ch-col-md-2 xs-pt-10 xs-pb-10 xs-mb-20 sm-mb-50">
+      {% if block.title is not empty %}
+          <h2 class="title-3 xs-mb-10 text-center">{{ block.title }}</h2>
+        {% endif %}
+        {% if block.image is not empty %}
+          <div class="ch-blocks-image xs-mb-10" style="background-image: url({{TimberImage(block.image).src}}); padding-top: 70%;"></div>
+        {% endif %}
+        {% if block.text is not empty %}
+          <p class="text-18 text-dark xs-mb-30">{{ block.text }}</p>
+        {% endif %}
+        <span class="button-gradient block text-18-bold caps">{{ block.link.text }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.ch-text-image {
+
+  &-icon {
+    width: pxem(55);
+  }
+
+  &-image {
+    display: flex;
+    justify-content: center;
+    order: 0;
+
+    @include mq($from: $breakpoint-small) {
+      order: 1;
+    }
+
+    img {
+      width: 100%;
+
+      @include mq($from: $breakpoint-small) {
+        width: 85%;
+        box-shadow: $gif-shadow;
+      }
+    }
+  }
+
+  &-text {
+    order: 1;
+
+    @include mq($from: $breakpoint-small) {
+      order: 0;
+    }
+  }
+
+  &.-left {
+
+    .ch-text-image-text {
+      order: 0;
+
+      @include mq($from: $breakpoint-small) {
+        order: 1;
+      }
+    }
+
+    .ch-text-image-image {
+
+      &-text {
+        order: 1;
+
+        @include mq($from: $breakpoint-small) {
+          order: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<header class="ch-header">
+  {% if options.notification is not empty %}
+  <div class="ch-header-announcement">
+    <p class="ch-header-announcement-content">{{ options.notification }}</p>
+  </div>
+  {% endif %}
+
+  <div class="ch-nav ch-nav-container flex justify-space-between align-center xs-pt-10 xs-pb-10 sm-pt-20 sm-pb-20" id="navContainer">
+    <a href="/" class="ch-nav-logo link-logo">
+      <div class="flex logo-desktop align-center">
+        <img src="{{theme.link}}/library/images/ch-logo@2x.png" alt="Charting Hockey Logo">
+      </div>
+    </a>
+    {# Desktop Nav #}
+      {% set navClass = '' %}
+      {% set postName = post.title %}
+      {% set homeName = 'Home' %}
+      {% set aboutName = 'About' %}
+      {% set postType = post.type %}
+
+      {% if postName starts with "Home" %}
+        {% set navClass = '' %}
+      {% elseif postName starts with "About" %}
+        {% set navClass = '' %}
+      {% elseif postType == "post" %}
+        {% set mobileNavClass = '' %}
+      {% else %}
+        {% set navClass = 'ch-nav-light' %}
+      {% endif %}
+    <nav class="ch-nav-desktop {{ navClass }}">
+      <ul class="list-unstyled flex">
+        {% for item in menu.items %}
+          <li class="{{ item.current ? 'active' : '' }}"><a class="link-nav" href="{{item.link}}">{{item.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {# Mobile Nav #}
+    {% set mobileNavClass = '' %}
+      {% set postName = post.title %}
+      {% set homeName = 'Home' %}
+      {% set aboutName = 'About' %}
+      {% set postType = post.type %}
+
+      {% if postName starts with "Home" %}
+        {% set mobileNavClass = '' %}
+      {% elseif postName starts with "About" %}
+        {% set mobileNavClass = '' %}
+      {% elseif postType == "post" %}
+        {% set mobileNavClass = '' %}
+      {% else %}
+        {% set mobileNavClass = 'ch-nav-mobile-light' %}
+      {% endif %}
+    <nav class="ch-nav-mobile {{ mobileNavClass }}">
+      <button class="ch-nav-toggle hamburger hamburger--slider" id="navToggle" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="ch-nav-links ch-nav-mobile-content" id="navContent">
+        <div class="ch-nav-mobile-content-links">
+          <div class="ch-container">
+            <div class="ch-row">
+              <div class="ch-col-xs-6">
+                  <ul class="list-unstyled">
+
+                {% for item in menu.items %}
+                  <li class="{{ item.current ? 'active' : '' }}"><a class="link-mobile-nav" href="{{item.link}}">{{item.title}}</a></li>
+                {% endfor %}
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ch-nav-mobile-content-bottom">
+            <div class="ch-container">
+              <div class="ch-row">
+
+                {% if options.nav_button != "" %}
+                  <a href="{{options.nav_button.url}}" class="ch-button ch-button-green ch-button-green-small">{{options.nav_button.text}}</a>
+                {% endif %}
+
+                {% if options.call_us is not empty %}
+                  <p>Give us a call at: 1-855-99-SENSU</p>
+                {% endif %}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

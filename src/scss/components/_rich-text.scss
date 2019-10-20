@@ -1,0 +1,202 @@
+.ch-rich-text {
+  color: $fill-black;
+
+  iframe {
+    width: 100%;
+    height: 700px;
+  }
+
+  h1 {
+    @extend .title-2;
+  }
+
+  h2 {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 28px,
+      992px: 36px
+    );
+    line-height: 1.175;
+    letter-spacing: -0.18px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  h3 {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 24px,
+      992px: 30px
+    );
+    line-height: 1.175;
+    letter-spacing: -0.18px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  h4 {
+    @extend .title-3;
+  }
+
+  h5 {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 18px,
+      992px: 24px
+    );
+    line-height: 1.175;
+    letter-spacing: -0.18px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  h6 {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 20px
+    );
+    line-height: 1.175;
+    letter-spacing: -0.18px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
+    margin-bottom: pxem(20);
+  }
+
+  p {
+
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6,
+    + ul,
+    + ol {
+      padding-top: pxem(20);
+    }
+  }
+
+  p:last-of-type {
+    /* stylelint-disable-next-line */
+    margin-bottom: 0;
+  }
+
+  p,
+  ul,
+  ol {
+    @include plex-regular;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 18px
+    );
+    line-height: 1.35;
+    letter-spacing: 0.89px;
+    @include poly-fluid-sizing("font-size", $map);
+
+    a {
+      text-decoration: none;
+      color: $fill-black;
+      @include grow-text-underline($fill-purple);
+    }
+
+    strong {
+      font-style: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+  }
+
+  ul,
+  ol {
+    padding-left: pxem(20);
+  }
+
+  strong {
+    font-style: bold;
+  }
+
+  em {
+    font-style: italic;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      @include grow-text-underline($fill-purple);
+    }
+  }
+
+  .caption {
+    @include roboto-bold-italic;
+    @include font-smoothing;
+    font-size: 16px;
+    line-height: 1;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      @include grow-text-underline($fill-purple);
+    }
+  }
+
+  // Overrides for tables since no margins are needed
+  &-table {
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul {
+      margin-bottom: 0;
+    }
+
+    p {
+
+      + h1,
+      + h2,
+      + h3,
+      + h4,
+      + h5,
+      + h6 {
+        padding-top: 0;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include font-smoothing;
+      @include plex-regular;
+      $map: (
+        576px: 15px,
+        768px: 16px
+      );
+      line-height: 1;
+      color: $fill-black;
+      @include poly-fluid-sizing("font-size", $map);
+    }
+  }
+}

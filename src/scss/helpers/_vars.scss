@@ -52,24 +52,26 @@ $t-1: cubic-bezier(0.2, 0.3, 0.25, 0.9);
 // -------------------------
 
 // Fills
-$fill-red: #E16767 !default;
-$fill-black: #000 !default;
+$fill-red: #FC1561 !default;
+$fill-black: #3b3b3b !default;
 $fill-white: #fff !default;
-$fill-teal: #018793 !default;
-$fill-footer: #091A22 !default;
+$fill-yellow: #FFFC72 !default;
+$fill-light-purple: #4A00DA !default;
+$fill-purple: #31018E !default;
+$fill-body: #F9F9F9 !default;
 
 // Type Colors
 $text-white: #fff !default;
-$text-black: #000 !default;
+$text-black: #111 !default;
 
 // Border Colors
-$border-gray: #979797 !default;
+$border-gray: #d9d9d9 !default;
 
 // Shadows
 // -------------------------
-$card-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.25);
+$hero-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.25);
 $box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-$tile-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.25);
+$gif-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
 $text-shadow: -3px 2px 0 #222222;
 $condensed-text-shadow: -2px 2px 0 #222222;
 

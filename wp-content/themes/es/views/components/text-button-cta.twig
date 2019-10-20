@@ -1,0 +1,25 @@
+{% if item.background_color == 'gray' %}
+  <section class="ch-basic-cta gray-bg">
+{% else %}
+  <section class="ch-basic-cta">
+{% endif %}
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-basic-cta-text-block">
+        {% if item.title is not empty %}
+          <h2>{{ item.title }}</h2>
+        {% endif %}
+
+        {% if item.text is not empty %}
+          <p>{{ item.text }}</p>
+        {% endif %}
+
+      </div>
+      <div class="ch-basic-cta-btn-block button-wrap">
+        {% set buttonColor = item.button_color %}
+        {% set class = "ch-button ch-button-" ~ buttonColor ~ " ch-button-" ~ buttonColor ~ "-large" %}
+        <a href="{{ item.cta_button.url }}" class="{{class}}" {{item.cta_button.target}}>{{item.cta_button.text}}</a>
+      </div>
+    </div>
+  </div>
+</section>

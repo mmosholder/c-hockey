@@ -1,0 +1,37 @@
+<section class="ch-columns ch-columns-large-spacing" style="background-color: #FFFFFF;">
+  <div class="ch-container">
+    {# <% if defined?(section_title) && section_title != '' %>
+      <div class="ch-row">
+        <div class="ch-heading-col">
+
+          <% if defined?(section_sub) && section_sub != '' %>
+          <h2 class="with-sub-text"><%= section_title %></h2>
+          <% else %>
+          <h2><%= section_title %></h2>
+          <% end %>
+
+          <% if defined?(section_sub) && section_sub != '' %>
+          <p><%= section_sub %></p>
+          <% end %>
+
+        </div>
+      </div>
+    <% end %> #}
+
+    <div class="ch-row">
+      {% for col in item.columns %}
+        <div class="ch-columns-col">
+          {% if col.column.title is not empty %}
+            <h3>{{ col.column.title }}</h3>
+          {% endif %}
+          {% if col.column.text is not empty %}
+          <p>{{ col.column.text }}</p>
+          {% endif %}
+          {% if col.column.link.text is not empty %}
+          <a href="{{ col.column.link.url }}" class="mt-10">{{col.column.link.text}}</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

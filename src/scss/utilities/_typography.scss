@@ -4,39 +4,122 @@
 .title {
 
   &-1 {
-    @include discount-bold;
+    @include roboto-bold-italic;
     @include font-smoothing;
     $map: (
-      576px: 30px,
-      992px: 50px,
-      1200px: 58px
+      576px: 35px,
+      992px: 60px,
+      1200px: 75px
     );
-    line-height: 1.1;
-    letter-spacing: 0.4px;
+    line-height: 1.175;
+    letter-spacing: -0.18px;
     @include poly-fluid-sizing("font-size", $map);
   }
 
-  &-logo {
-    @include discount-bold;
+  &-2 {
+    @include roboto-bold;
     @include font-smoothing;
     $map: (
-      576px: 26px,
-      992px: 36px
+      576px: 32px,
+      992px: 40px
     );
-    line-height: 1.2;
-    letter-spacing: 0.5px;
+    line-height: 1.175;
+    letter-spacing: -0.18px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-3 {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 20px,
+      992px: 28px
+    );
+    line-height: 1.25;
+    letter-spacing: 0.89px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-4 {
+    @include roboto-bold-italic;
+    @include font-smoothing;
+    $map: (
+      576px: 30px,
+      992px: 44px
+    );
+    line-height: 1.175;
+    letter-spacing: 0.89px;
     @include poly-fluid-sizing("font-size", $map);
   }
 }
 
 .text {
 
-  &-20 {
-    @include plex-regular;
+  &-20-italic {
+    @include roboto-medium-italic;
     @include font-smoothing;
     $map: (
       576px: 16px,
       992px: 20px
+    );
+    line-height: 1.14;
+    letter-spacing: 0.97px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-20-medium {
+    @include roboto-medium;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 20px
+    );
+    line-height: 1.14;
+    letter-spacing: 0.97px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-18 {
+    @include plex-regular;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 18px
+    );
+    line-height: 1.35;
+    letter-spacing: 0.89px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-18-bold {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 18px
+    );
+    line-height: 1.35;
+    letter-spacing: 0.89px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-16 {
+    @include plex-regular;
+    @include font-smoothing;
+    $map: (
+      576px: 14px,
+      992px: 16px
+    );
+    line-height: 1.25;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-16-italic {
+    @include roboto-bold-italic;
+    @include font-smoothing;
+    $map: (
+      576px: 14px,
+      992px: 16px
     );
     line-height: 1.25;
     @include poly-fluid-sizing("font-size", $map);
@@ -53,19 +136,123 @@
     @include poly-fluid-sizing("font-size", $map);
   }
 
-  &-button {
-    @include discount-bold;
+  &-14-bold {
+    @include roboto-bold;
     @include font-smoothing;
-    font-size: 22px;
+    $map: (
+      576px: 12px,
+      992px: 14px
+    );
+    line-height: 1.25;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-nav {
+    @include plex-mono;
+    @include font-smoothing;
+    font-size: 18px;
+    line-height: 1.27;
+    letter-spacing: 0.8px;
+  }
+
+  &-footer-nav {
+    @include plex-mono;
+    @include font-smoothing;
+    font-size: 16;
+    line-height: 1.27;
+    letter-spacing: 0.8px;
+  }
+
+  &-caption {
+    @include roboto-bold-italic;
+    @include font-smoothing;
+    font-size: 16px;
     line-height: 1;
-    letter-spacing: 0.5px;
+  }
+
+  &-button {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 18px,
+      992px: 22px
+    );
+    line-height: 1;
+    letter-spacing: 1px;
+    @include poly-fluid-sizing("font-size", $map);
   }
 }
 
 .link {
 
+  &-nav {
+    @include plex-mono;
+    @include font-smoothing;
+    font-size: 18px;
+    line-height: 1.27;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    color: rgba($fill-black, 1);
+    transition: color 240ms $t-1;
+
+    &:hover {
+      color: rgba($fill-black, 0.8);
+    }
+  }
+
+  &-footer-nav {
+    @include plex-mono;
+    @include font-smoothing;
+    font-size: 14px;
+    line-height: 1.27;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    color: rgba($fill-black, 1);
+    transition: color 240ms $t-1;
+
+    &:hover {
+      color: rgba($fill-black, 0.8);
+    }
+  }
+
+  &-mobile-nav {
+    @include plex-mono;
+    @include font-smoothing;
+    font-size: 18px;
+    line-height: 1.27;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    color: rgba($fill-white, 1);
+    transition: color 240ms $t-1;
+
+    &:hover {
+      color: rgba($fill-white, 0.8);
+    }
+  }
+
+  &-button {
+    @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 18px,
+      992px: 22px
+    );
+    line-height: 1;
+    letter-spacing: 1px;
+    @include poly-fluid-sizing("font-size", $map);
+    text-decoration: none;
+  }
+
   &-logo {
     text-decoration: none;
+  }
+
+  &-grow {
+    @include plex-semibold;
+    @include font-smoothing;
+    font-size: 18px;
+    text-decoration: none;
+    @include grow-text-underline($fill-purple);
   }
 }
 

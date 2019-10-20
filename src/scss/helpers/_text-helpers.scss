@@ -64,8 +64,8 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 6px;
-    bottom: -2px;
+    height: 3px;
+    bottom: 0;
     left: 0;
     background-color: $bgcolor;
     transition: height 240ms $t-1;
@@ -73,7 +73,7 @@
   }
 
   &:hover {
-    color: $color-white;
+    color: $fill-white;
 
     &:after {
       height: 100%;

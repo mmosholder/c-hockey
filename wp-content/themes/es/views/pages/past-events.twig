@@ -1,0 +1,72 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+{% set year = item.event_years %}
+<section class="ch-hero ch-hero-slim ch-hero-slim-remove-border">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-hero-content">
+
+          {% if post.title is not empty %}
+          <h1>{{ post.title }}</h1>
+          {% endif %}
+
+          {% if post.hero_description is not empty %}
+          <p>{{ post.hero_description }}</p>
+          {% endif %}
+
+      </div>
+        <div class="ch-hero-image ch-hero-slim-image">
+          <img src="{{ TimberImage(post.pe_hero).src }}" alt="Monitoring with Sensu provides total visibility into your infrastructure" style="max-width:420px" />
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="ch-past-events">
+  <div class="ch-container">
+    <div class="ch-row">
+      {% for item in past_events %}
+          {% set year = item.event_years %}
+          {% set title = item.hp_title %}
+          {% set content = item.hp_content %}
+          {% set link = item.hp_link %}
+
+          {% if year is not empty %} {# do not show if year is not set #}
+          <div class="ch-past-events-item">
+            <img src="{{ item.thumbnail.src|tojpg|resize(500, 295) }}">
+            <h3><a href="{{ link }}">{{ title }} {{ year }}</a></h3>
+            <p>{{ content }}</p>
+          </div>
+          {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<section class="ch-community-cta">
+  <div class="ch-container">
+    <div class="ch-row {{ (post.add_top_border == true ) ? 'border-top' : 'no-border' }}">
+      <div class="ch-community-cta-left">
+        {% if post.cta_title is not empty %}
+          <h3 class="ch-community-cta-title">{{ post.cta_title }}</h2>
+        {% endif %}
+        {% if post.cta_desc is not empty %}
+          <p class="ch-community-cta-copy">{{ post.cta_desc }}</p>
+        {% endif %}
+      </div>
+      <div class="ch-community-cta-right">
+        <div class="ch-community-cta-input-group">
+          <div id="mc_embed_signup">
+              <form action="//heavywater.us6.list-manage.com/subscribe/post?u=576e632588&amp;amp;id=2e5efd43d8" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+                <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your Email" class="ch-input">
+                <button class="ch-button" type="submit" id="mce-embedded-subscribe">Sign Up!</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

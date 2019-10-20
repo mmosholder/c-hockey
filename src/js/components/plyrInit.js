@@ -1,3 +1,12 @@
-import plyr from 'plyr';
+import * as Plyr from 'plyr';
 
-const players = Plyr.setup('.su_recent_talk_video');
+const plyrOptions = {
+  clickToPlay: false,
+  displayDuration: false,
+  controls: [],
+  muted: true,
+  autoplay: true,
+  loop: {active: true}
+}
+
+const players = Plyr.setup('.ch-video-embed', plyrOptions);

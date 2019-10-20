@@ -1,8 +1,0 @@
-{% extends "layouts/base.twig" %}
-{% block content %}
-  {% for item in post.get_field('layout') %}
-    {% if item.acf_fc_layout == 'hero_bg' %}
-      {% include 'components/hero_bg.twig' %}
-    {% endif %}
-  {% endfor %}
-{% endblock %}

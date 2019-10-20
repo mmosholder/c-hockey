@@ -1,0 +1,16 @@
+.ch-cta {
+  background-image: linear-gradient(90deg, #594BCC 1%, #76288C 100%);
+  z-index: 3;
+  position: relative;
+
+  &-buttons {
+    width: auto;
+    text-align: center;
+
+    span {
+      width: 100%;
+      display: block;
+      margin: pxem(10) 0;
+    }
+  }
+}

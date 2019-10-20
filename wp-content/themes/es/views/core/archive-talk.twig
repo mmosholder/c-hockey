@@ -1,0 +1,36 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+<section class="ch-hero ch-hero-slim ch-hero-slim-blue ch-hero-slim-remove-border">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-hero-content">
+          <h1>{{options.talks_archive_hero_title}}</h1>
+          <p>{{options.talks_archive_hero_desc}}</p>
+      </div>
+        <div class="ch-hero-image ch-hero-slim-image">
+          <img src="http://ch.local/wp-content/uploads/2018/08/eye-circle@2x-f4753198.png" alt="Monitoring with Sensu provides total visibility into your infrastructure" style="max-width:420px" />
+        </div>
+    </div>
+  </div>
+</section>
+<section class="ch-columns -white-bg">
+  <div class="ch-container">
+    <div class="ch-row">
+      {% for post in posts %}
+        {% set youtube_id = post.get_field('youtube_id') %}
+        {% set desc = post.get_field('talk_description') %}
+        <div class="ch-recent-talks-item">
+          <div class="plyr__video-embed su_recent_talk_video">
+              <iframe src="https://www.youtube.com/embed/{{ youtube_id }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+          </div>
+          <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+          <h4>{{ desc }}</h4>
+        </div>
+        {# <pre>
+        {{ dump(post) }}
+        </pre> #}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

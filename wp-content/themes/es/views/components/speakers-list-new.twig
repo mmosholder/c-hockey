@@ -1,0 +1,18 @@
+<section class="ch-columns -white-bg">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-heading-col">
+        <h2>Speakers & Presenters</h2>
+      </div>
+    </div>
+    <div class="ch-row">
+    {% for sp in item.speakers_presenters %}
+      <div class="ch-columns-col">
+        <img src="{{TimberImage(sp.speaker_profile_image)}}" width="140" class="col-icon col-icon-profile" />
+        <h3>{{ sp.title }}</h3>
+        <p>{{ sp.speaker_desc | excerpt(20)}}</p>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

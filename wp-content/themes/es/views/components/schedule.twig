@@ -1,0 +1,15 @@
+<div class="ch-event-schedule -white-bg">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-heading-col">
+        <h2>{{ item.section_title }}</h2>
+        {% if item.event_disable %}
+          <p>{{ item.section_text }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% if not item.event_disable %}
+      {% include 'partials/schedule/content.twig' %}
+    {% endif %}
+  </div>
+</div>

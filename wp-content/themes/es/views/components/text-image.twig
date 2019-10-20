@@ -1,0 +1,90 @@
+{% if item.text_image_block_image_alignment == "Left" %}
+  <section class="ch-text-image -left xs-pb-50 xs-pt-50 lg-pb-100 lg-pt-100">
+    <div class="ch-container">
+      <div class="ch-row align-center">
+        {% if item.text_image_type == "Image" %}
+          <div class="ch-text-image-image ch-col-xs-6 ch-col-sm-3">
+            <img src="{{TimberImage(item.text_image_block_image).src}}" alt="{{item.text_image_block_image.alt}}"/>
+          </div>
+        {% else %}
+          <div class="ch-text-image-video ch-col-xs-6 ch-col-sm-3">
+            {% if item.text_image_block_video_type == 'Link' %}
+              <div class="ch-text-image-video-embed" data-plyr-provider="{{ item.text_image_block_video_type }}" data-plyr-embed-id="{{ item.text_image_block_video_url}}"></div>
+            {% else %}
+              {# <video class="ch-text-image-video-embed" controls loop mute>
+                <source src="{{ item.text_image_block_video_file}}"></source>
+              </video> #}
+              <div class="ch-text-image-image">
+                <img src="{{TimberImage(item.text_image_block_video_file).src}}" alt="{{item.text_image_block_video_file.alt}}"/>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+        <div class="ch-text-image-text ch-col-xs-6 ch-col-sm-3 xs-mt-20 sm-mt-20">
+          {% if item.text_image_block_icon is not empty %}
+            <div class="ch-text-image-icon xs-mb-10">
+              <img src="{{TimberImage(item.text_image_block_icon).src}}" alt="{{item.text_image_block_image.alt}}"/>
+            </div>
+          {% endif %}
+          {% if item.text_image_block_title is not empty %}
+            <h2 class="title-2 text-dark xs-mb-20">{{ item.text_image_block_title }}</h2>
+          {% endif %}
+          {% if item.text_image_block_text is not empty %}
+            <p class="text-18 text-dark">{{ item.text_image_block_text }}</p>
+          {% endif %}
+
+          {% if item.text_image_block_button %}
+              <div class="ch-text-image-button xs-mt-30">
+                  <a href="{{item.text_image_block_button.url}}" {{item.text_image_block_button.target}} class="button-gradient link-button caps">{{ item.text_image_block_button.text }}</a>
+              </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="ch-text-image xs-pt-30 xs-pb-30 sm-pb-50 sm-pt-50 lg-pb-100 lg-pt-100">
+    <div class="ch-container">
+      <div class="ch-row align-center">
+        <div class="ch-text-image-text ch-col-xs-6 ch-col-sm-3 xs-mt-20 sm-mt-20">
+          {% if item.text_image_block_icon is not empty %}
+            <div class="ch-text-image-icon xs-mb-10">
+              <img src="{{TimberImage(item.text_image_block_icon).src}}" alt="{{item.text_image_block_image.alt}}"/>
+            </div>
+          {% endif %}
+          {% if item.text_image_block_title is not empty %}
+            <h2 class="title-2 text-dark xs-mb-20">{{ item.text_image_block_title }}</h2>
+          {% endif %}
+          {% if item.text_image_block_text is not empty %}
+            <p class="text-18 text-dark">{{ item.text_image_block_text }}</p>
+          {% endif %}
+
+          {% if item.text_image_block_button %}
+              <div class="ch-text-image-button xs-mt-30">
+                  <a href="{{item.text_image_block_button.url}}" {{item.text_image_block_button.target}} class="button-gradient link-button caps">{{ item.text_image_block_button.text }}</a>
+              </div>
+          {% endif %}
+        </div>
+
+        {% if item.text_image_type == "Image" %}
+          <div class="ch-text-image-image ch-col-xs-6 ch-col-sm-3">
+            <img src="{{TimberImage(item.text_image_block_image).src}}" alt="{{item.text_image_block_image.alt}}"/>
+          </div>
+        {% else %}
+          <div class="ch-text-image-video ch-col-xs-6 ch-col-sm-3">
+            {% if item.text_image_block_video_type == 'Link' %}
+              <div class="ch-text-image-video-embed" data-plyr-provider="{{ item.text_image_block_video_type }}" data-plyr-embed-id="{{ item.text_image_block_video_url}}"></div>
+            {% else %}
+              {# <video class="ch-text-image-video-embed" controls loop mute>
+                <source src="{{ item.text_image_block_video_file}}"></source>
+              </video> #}
+              <div class="ch-text-image-image">
+                <img src="{{TimberImage(item.text_image_block_video_file).src}}" alt="{{item.text_image_block_video_file.alt}}"/>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}

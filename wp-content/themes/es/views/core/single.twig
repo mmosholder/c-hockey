@@ -1,0 +1,25 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+<section class="ch-hero-article xs-mb-20 sm-mb-50">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-col-xs-6 ch-col-sm-4 ch-offset-sm-1">
+        <h1 class="title-1 text-dark xs-mb-10">{{ post.title }}</h1>
+        <div class="ch-hero-article-info">
+          <p class="text-20-medium text-dark"><span class="text-20-italic xs-mr-10">by</span>{{ post.author.name}} | {{ post.date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ch-article">
+  {% for item in post.get_field('article_layout') %}
+    {% if item.acf_fc_layout == 'article_section_text_title' %}
+      {% include 'components/text-title.twig' %}
+    {% elseif item.acf_fc_layout == 'article_image' %}
+      {% include 'components/image.twig' %}
+    {% endif %}
+  {% endfor %}
+</section>
+{% endblock %}

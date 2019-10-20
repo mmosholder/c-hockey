@@ -1,0 +1,15 @@
+<section class="ch-hero-tools" style="background-image: url({{TimberImage(item.image).src}});">
+    <div class="ch-container">
+      <div class="ch-row">
+        <div class="ch-col-xs-6">
+          <h1 class="title-1 text-yellow text-center">{{ item.title }}</h1>
+          {% if item.text is not empty %}
+            <p class="text-20 text-yellow text-center">{{ item.text }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="ch-hero-tools-filter1"></div>
+    <div class="ch-hero-tools-filter2"></div>
+    <img class="ch-hero-tools-pattern" src="{{theme.link}}/library/images/triangles-layer@2x.png" alt="">
+  </section>

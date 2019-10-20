@@ -1,0 +1,14 @@
+<div class="ch-image xs-mb-30 xs-mt-30">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-col-xs-6">
+        <img src="{{TimberImage(item.image).src}}" alt="{{item.image.alt}}"/>
+      </div>
+      {% if item.caption is not empty %}
+      <div class="ch-col-xs-6 ch-col-sm-4 ch-offset-sm-1 xs-mt-10">
+        <span class="text-caption text-dark" style="opacity: 0.56;">{{ item.caption }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

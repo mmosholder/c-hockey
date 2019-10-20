@@ -1,0 +1,10 @@
+{% extends "layouts/base.twig" %}
+{% block content %}
+  {% for item in post.get_field('layout') %}
+    {% if item.acf_fc_layout == 'hero_bg' %}
+      {% include 'components/video_hero.twig' %}
+    {% elseif item.acf_fc_layout == 'text_image_block' %}
+      {% include 'components/text-image.twig' %}
+    {% endif %}
+  {% endfor %}
+{% endblock %}

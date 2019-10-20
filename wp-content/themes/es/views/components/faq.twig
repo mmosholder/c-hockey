@@ -1,0 +1,34 @@
+<section class="ch-summit-faq">
+  <div class="ch-container">
+    <div class="ch-row">
+      <section class="ch-text-info">
+        <div class="ch-container">
+          <div class="ch-row">
+            <div class="ch-markdown-content">
+              {% for item in item.faq_content %}
+                <h2>{{ item.faq_question }}</h2>
+                {{ item.faq_answer }}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ch-sidebar">
+        <div class="ch-sidebar-content">
+          <div class="ch-container">
+          <div class="ch-row">
+            <div class="ch-summit-sidebar">
+              {% if item.sidebar_title %}
+              <h2>{{ item.sidebar_title }}</h2>
+              {% endif %}
+              {% if item.sidebar_content %}
+              <p>{{ item.sidebar_content }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

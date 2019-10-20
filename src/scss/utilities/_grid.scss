@@ -1,7 +1,6 @@
-$container-max-width: pxem(1240);
-$body-max-width: pxem(1600);
-$columns: 12;
-$gutter-width: 1.25rem;
+$container-max-width: pxem(1280);
+$columns: 6;
+$gutter-width: 3.125rem;
 $gutter-width-mobile: 1.25rem;
 
 $grid-breakpoints: (
@@ -49,21 +48,21 @@ $gutter-compensations: (
 @mixin col($col-num) {
   flex-basis: (100% * $col-num / $columns);
   max-width: (100% * $col-num / $columns);
+  padding-left: gutter("xs");
+  padding-right: gutter("xs");
+
+  @include mq($from: breakpoint("sm")) {
+    padding-left: gutter("sm");
+    padding-right: gutter("sm");
+  }
+
 }
 
-.gc-main {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  max-width: $body-max-width;
-  width: 100%;
-}
-
-.gc-container {
+.ch-container {
   padding-left: gutter("xs");
   padding-right: gutter("xs");
   max-width: $container-max-width;
+  position: relative;
 
   @include mq($from: breakpoint("sm")) {
     margin-left: auto;
@@ -80,7 +79,7 @@ $gutter-compensations: (
   }
 }
 
-.gc-nav-container {
+.ch-nav-container {
   padding-left: pxem(20);
   padding-right: pxem(20);
   max-width: 100%;
@@ -93,7 +92,7 @@ $gutter-compensations: (
   }
 }
 
-.gc-row {
+.ch-row {
   box-sizing: border-box;
   min-height: 1px;
   display: flex;
@@ -113,7 +112,7 @@ $gutter-compensations: (
 
 // Spans ( Columns with 1px padding )
 
-[class*="gc-span-"] {
+[class*="ch-span-"] {
   position: relative;
   min-height: 1px;
   padding-left: 1px;
@@ -121,13 +120,14 @@ $gutter-compensations: (
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  width: 100%;
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
 
-      .gc-span-#{$breakpoint}-#{$i} {
+      .ch-span-#{$breakpoint}-#{$i} {
         width: (100% / $columns * $i);
         max-width: (100% / $columns * $i);
       }
@@ -137,7 +137,7 @@ $gutter-compensations: (
 
 // Columns
 
-[class*="gc-col-"] {
+[class*="ch-col-"] {
   position: relative;
   min-height: 1px;
   padding-left: gutter("xs");
@@ -145,6 +145,7 @@ $gutter-compensations: (
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  width: 100%;
 
   @media (min-width: breakpoint("sm")) {
     padding-left: gutter("xs");
@@ -156,7 +157,7 @@ $gutter-compensations: (
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
 
-      .gc-col-#{$breakpoint}-#{$i} {
+      .ch-col-#{$breakpoint}-#{$i} {
         width: (100% / $columns * $i);
         max-width: (100% / $columns * $i);
       }
@@ -169,7 +170,7 @@ $gutter-compensations: (
   @media (min-width: breakpoint($breakpoint)) {
     @for $i from 1 through $columns {
 
-      .gc-offset-#{$breakpoint}-#{$i} {
+      .ch-offset-#{$breakpoint}-#{$i} {
         margin-left: (100% / $columns * $i);
       }
     }
@@ -180,7 +181,7 @@ $gutter-compensations: (
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
 
-    .gc-hidden-#{$breakpoint} {
+    .ch-hidden-#{$breakpoint} {
       display: none;
     }
   }
@@ -190,7 +191,7 @@ $gutter-compensations: (
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
 
-    .gc-show-#{$breakpoint}-flex {
+    .ch-show-#{$breakpoint}-flex {
       display: flex;
     }
   }
@@ -200,7 +201,7 @@ $gutter-compensations: (
 @each $breakpoint in map-keys($grid-breakpoints) {
   @media (min-width: breakpoint($breakpoint)) {
 
-    .gc-show-#{$breakpoint} {
+    .ch-show-#{$breakpoint} {
       display: block;
     }
   }

@@ -1,27 +1,187 @@
-.gc-hero {
+.ch-hero {
 
-  &-bg {
+  h1 {
+    @include mq($from: $breakpoint-medium) {
+      text-align: right;
+    }
+  }
+
+  &-video-bg {
+    @include mq($to: $breakpoint-small) {
+
+      .ch-container {
+        padding: 0;
+      }
+
+      .ch-row {
+        margin: 0;
+      }
+
+      [class*="ch-col-"] {
+        padding: 0;
+      }
+    }
+  }
+
+  &-video {
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: pxem(-78);
-    padding: pxem(125) 0 pxem(75) 0;
+    padding-top: pxem(50);
+    padding-bottom: pxem(50);
     z-index: 0;
 
-    .gc-container {
-      z-index: 2;
-      position: relative;
+    @include mq($from: $breakpoint-small) {
+      padding-top: pxem(70);
+      padding-bottom: pxem(70);
     }
 
-    &-filter {
+    @include mq($from: $breakpoint-medium) {
+      padding-top: pxem(300);
+      padding-bottom: pxem(60);
+    }
+
+    .ch-video {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      height: auto;
+      min-width: 100%;
+      width: auto;
+      overflow: hidden;
+
+      .plyr {
+        display: none;
+
+        @include mq($from: $breakpoint-small) {
+          display: block;
+        }
+      }
+
+      &-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+
+        @include mq($from: $breakpoint-small) {
+          display: none;
+        }
+      }
+
+
+      video {
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        height: auto;
+        width: auto;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        transition: opacity 500ms 500ms $t-1;
+      }
+    }
+  }
+
+  .ch-container {
+    z-index: 0;
+    position: relative;
+  }
+
+  .ch-row {
+    position: relative;
+    z-index: 4;
+  }
+
+  .ch-hero-bg-filter1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+
+  .ch-hero-bg-filter2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #594BCC 0%, #76288C 100%);
+    background-blend-mode: multiply;
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  .ch-hero-bg-filter3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#20025A, 0.7);
+    background-blend-mode: multiply;
+    z-index: 3;
+  }
+
+  &-tools {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: pxem(100);
+    padding-bottom: pxem(60);
+    z-index: 0;
+    margin-top: pxem(-100);
+
+    @include mq($from: $breakpoint-medium) {
+      padding-top: pxem(150);
+      padding-bottom: pxem(150);
+      margin-top: pxem(-125);
+    }
+
+    .ch-container {
+      z-index: 5;
+    }
+
+    &-filter1 {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba($fill-black, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
       z-index: 1;
+    }
+
+    &-filter2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(90deg, #594BCC 0%, #76288C 100%);
+      background-blend-mode: multiply;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    &-pattern {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+      z-index: 2;
+      width: 91%;
     }
   }
 }

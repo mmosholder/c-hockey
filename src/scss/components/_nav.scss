@@ -1,7 +1,119 @@
-.gc-nav {
+.ch-nav {
 
-  img {
-    max-width: pxem(55);
-    width: 100%;
+  &-logo {
+    position: relative;
+    z-index: 2;
+
+    img {
+      max-width: pxem(170);
+      width: 60%;
+
+      @include mq($from: $breakpoint-small) {
+        width: 70%;
+      }
+
+      @include mq($from: $breakpoint-medium) {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &-desktop {
+    display: none;
+
+    @include mq($from: $breakpoint-small) {
+      display: inline-block;
+    }
+
+    li {
+      padding: 0 12px;
+
+      &:last-of-type {
+        padding: 0 0 0 12px;
+      }
+
+      a {
+        position: relative;
+        padding-bottom: 5px;
+
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background-color: rgba($fill-purple, 0);
+          transition: background-color 200ms 100ms $t-1, width 200ms $t-1;
+        }
+
+        &:hover {
+
+          &:after {
+            background-color: rgba($fill-purple, 1);
+            width: 100%;
+          }
+        }
+      }
+
+      &.active {
+
+        a {
+
+          &:after {
+            background-color: rgba($fill-purple, 1);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &-light {
+
+    .ch-nav-desktop {
+      display: none;
+
+      @include mq($from: $breakpoint-small) {
+        display: inline-block;
+      }
+    }
+
+    .link-nav {
+      color: $fill-white;
+
+      &:hover {
+        color: darken($fill-white, 10%);
+      }
+    }
+
+    li {
+
+      a {
+
+        &:after {
+          background-color: rgba($fill-yellow, 0);
+        }
+
+        &:hover {
+
+          &:after {
+            background-color: rgba($fill-yellow, 1);
+          }
+        }
+      }
+
+      &.active {
+
+        a {
+
+          &:after {
+            background-color: rgba($fill-yellow, 1);
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }

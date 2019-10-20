@@ -68,7 +68,6 @@
 
 .button {
   @include button-reset;
-  border-radius: 2px;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -83,11 +82,81 @@
   }
 
   &-large {
-    padding: pxem(15) pxem(30);
+    padding: pxem(12) pxem(40);
   }
 
-  &-teal {
-    @include button-style($fill-teal, $text-white);
+  &-hollow {
+    padding: pxem(12) pxem(40);
+    border: 2px solid $fill-purple;
+    color: $fill-purple;
+    background-color: rgba($fill-purple, 0);
+    text-align: center;
+    width: 100%;
+    display: block;
+
+    @include mq($from: 600px) {
+      width: auto;
+      display: inline-block;
+    }
+
+    &:hover {
+      background-color: rgba($fill-purple, 1);
+      color: $fill-white;
+      transition: background-color 240ms $t-1;
+    }
+  }
+
+  &-hollow-white {
+    padding: pxem(12) pxem(40);
+    border: 2px solid $fill-white;
+    color: $fill-white;
+    background-color: rgba($fill-white, 0);
+    transition: background-color 240ms $t-1;
+
+    &:hover {
+      background-color: rgba($fill-white, 1);
+      color: $fill-purple;
+      transition: background-color 240ms $t-1;
+    }
+  }
+
+  &-gradient {
+    padding: pxem(12) pxem(40);
+    border: 2px solid rgba($fill-purple, 1);
+    color: $fill-purple;
+    text-align: center;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: color 240ms $t-1;
+
+    @include mq($from: 600px) {
+      width: auto;
+      display: inline-block;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-image: linear-gradient(90deg, #594BCC 0%, #76288C 100%);
+      transition: width 240ms $t-1;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+      color: $fill-white;
+
+      &:after {
+        width: 100%;
+      }
+
+    }
   }
 }
 

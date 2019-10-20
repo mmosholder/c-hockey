@@ -1,0 +1,19 @@
+<div class="ch-row">
+  <ul class="ch-tabbed-content-tabs">
+    {% for event_tab in item.event_tab %}
+    <li class="ch-tabbed-content-tab {% if loop.first %}-active -line-right {% else %} -line-left {% endif %}">
+      <a class="ch-tabbed-content-marker"
+        href="#tab{{ event_tab.tab_id }}">
+        <div class="ch-tabbed-content-marker-outer">
+          <span class="ch-tabbed-content-marker-inner" />
+        </div>
+        <span class="ch-tabbed-content-tab-title">{{ event_tab.event_tab_title }}
+        </span>
+      </a>
+    </li>
+    {% if loop.first %}
+    <li class="ch-tabbed-content-tab-line" /></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

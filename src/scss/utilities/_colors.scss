@@ -5,8 +5,20 @@ $text-colors: (
   white: (
     base: $fill-white
   ),
-  black: (
+  dark: (
     base: $fill-black
+  ),
+  light-purple: (
+    base: $fill-light-purple
+  ),
+  yellow: (
+    base: $fill-yellow
+  ),
+  red: (
+    base: $fill-red
+  ),
+  purple: (
+    base: $fill-purple
   )
 );
 
@@ -19,16 +31,25 @@ $text-colors: (
 
 $fill-colors: (
   white: (
-    base: $fill-white,
+    base: $fill-white
   ),
-  black: (
+  dark: (
     base: $fill-black
   ),
-  teal: (
-    base: $fill-teal
+  light-purple: (
+    base: $fill-light-purple
   ),
-  footer: (
-    base: $fill-footer
+  yellow: (
+    base: $fill-yellow
+  ),
+  red: (
+    base: $fill-red
+  ),
+  purple: (
+    base: $fill-purple
+  ),
+  body: (
+    base: $fill-body
   )
 );
 

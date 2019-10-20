@@ -1,0 +1,2 @@
+[Fri Oct 18 18:56:50.115229 2019] [core:error] [pid 7702] [client 73.95.214.58:65375] End of script output before headers: async-upload.php, referer: http://www.chartinghockey.ca/wp-admin/post.php?post=6&action=edit
+[Fri Oct 18 18:57:11.072216 2019] [core:error] [pid 7141] [client 73.95.214.58:65453] End of script output before headers: async-upload.php, referer: http://www.chartinghockey.ca/wp-admin/post.php?post=6&action=edit

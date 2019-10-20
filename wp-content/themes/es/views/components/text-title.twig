@@ -1,0 +1,16 @@
+<section class="ch-text-title xs-pt-10 xs-pb-10 sm-pt-30 sm-pb-30">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-col-xs-6 ch-col-sm-4 ch-offset-sm-1">
+        {% if item.title is not empty %}
+          <h2 class="title-3 title-dark">{{ item.title }}</h2>
+        {% endif %}
+        {% if item.text is not empty %}
+          <div class="ch-rich-text">
+            {{ item.text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<section class="ch-columns -white-bg">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-heading-col">
+        <h2>Keynote Speakers</h2>
+      </div>
+    </div>
+    <div class="ch-row">
+    {% for speaker in speakers %}
+      {% if speaker.speaker_type == "Keynote" %}
+      <div class="ch-columns-col">
+        <img src="{{TimberImage(speaker.speaker_profile_image)}}" width="140" class="col-icon col-icon-profile" />
+        <h3>{{speaker.title}}</h3>
+        {% if speaker.speaker_role is not empty %}
+          <p>{{ speaker.speaker_role }}</p>
+        {% endif %}
+        <a href="{{speaker.link}}" class="mt-10">Learn More</a>
+      </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="ch-columns -white-bg">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-heading-col">
+        <h2>Session Speakers</h2>
+      </div>
+    </div>
+    <div class="ch-row">
+    {% for speaker in speakers %}
+      {% if speaker.speaker_type == "Session" %}
+      <div class="ch-columns-col">
+        <img src="{{TimberImage(speaker.speaker_profile_image)}}" width="140" class="col-icon col-icon-profile" />
+        <h3>{{speaker.title}}</h3>
+        {% if speaker.speaker_role is not empty %}
+          <p>{{ speaker.speaker_role }}</p>
+        {% endif %}
+        <a href="{{speaker.url}}" class="mt-10">Learn More</a>
+      </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>

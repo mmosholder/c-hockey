@@ -32,14 +32,14 @@ mix.webpackConfig({
 
 mix
   // .pug("src/views/*.pug", "build/")
-  .js("src/js/app.js", "wp-content/themes/gc/assets/js/")
-  .sass("src/scss/app.scss", "wp-content/themes/gc/assets/css/")
+  .js("src/js/app.js", "wp-content/themes/es/library/js/")
+  .sass("src/scss/app.scss", "wp-content/themes/es/library/css/")
   .browserSync({
     proxy: "192.168.33.10",
     files: [
-      // "wp-content/themes/gc/views/",
-      "wp-content/themes/gc/assets/css/app.css",
-      "wp-content/themes/gc/assets/js/app.js"
+      // "wp-content/themes/es/views/",
+      "wp-content/themes/es/library/css/app.css",
+      "wp-content/themes/es/library/js/app.js"
     ]
   })
   .options({
