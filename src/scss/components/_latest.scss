@@ -1,0 +1,29 @@
+.ch-latest {
+
+  &-item {
+
+    h3,
+    p {
+      opacity: 1;
+      transition: opacity 240ms $t-1;
+    }
+
+    &:hover {
+
+      h3,
+      p {
+        opacity: 0.7;
+        transition: opacity 240ms $t-1;
+      }
+
+      .link-grow {
+        opacity: 1;
+        color: $fill-white;
+
+        &:after {
+          height: 80%;
+        }
+      }
+    }
+  }
+}

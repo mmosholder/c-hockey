@@ -33,7 +33,7 @@
             <p class="text-18 text-dark">{{ item.text_image_block_text }}</p>
           {% endif %}
 
-          {% if item.text_image_block_button %}
+          {% if item.text_image_block_button.url is not empty %}
               <div class="ch-text-image-button xs-mt-30">
                   <a href="{{item.text_image_block_button.url}}" {{item.text_image_block_button.target}} class="button-gradient link-button caps">{{ item.text_image_block_button.text }}</a>
               </div>
@@ -59,7 +59,7 @@
             <p class="text-18 text-dark">{{ item.text_image_block_text }}</p>
           {% endif %}
 
-          {% if item.text_image_block_button %}
+          {% if item.text_image_block_button.url is not empty %}
               <div class="ch-text-image-button xs-mt-30">
                   <a href="{{item.text_image_block_button.url}}" {{item.text_image_block_button.target}} class="button-gradient link-button caps">{{ item.text_image_block_button.text }}</a>
               </div>

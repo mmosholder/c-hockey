@@ -29,6 +29,8 @@
       {% include 'components/three-col-blocks.twig' %}
     {% elseif item.acf_fc_layout == 'content_block_repeater' %}
       {% include 'components/content-repeater.twig' %}
+    {% elseif item.acf_fc_layout == 'latest_posts' %}
+      {% include 'components/latest-posts.twig' %}
     {% endif %}
   {% endfor %}
   {% include "components/cta.twig" %}

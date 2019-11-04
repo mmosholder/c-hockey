@@ -22,6 +22,12 @@ elseif ( is_page() ) :
   $post = new TimberPost();
   $context['post'] = $post;
 
+  // get latest three posts
+  $args = array(
+      'posts_per_page' => 3
+  );
+  $context['latest_posts'] = Timber::get_posts($args);
+
   Timber::render( array(
     'core/page-' . $post->post_name . '.twig',
     'core/page.twig' ),

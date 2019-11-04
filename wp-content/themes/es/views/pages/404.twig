@@ -1,56 +1,25 @@
 {% extends "layouts/base.twig" %}
 {% block content %}
-  <section class="ch-hero ch-hero-slim  ch-hero-slim-remove-border">
+<section class="ch-hero-tools" style="background-image: url(https://www.chartinghockey.ca/wp-content/uploads/2019/10/goalie-header.jpg);">
   <div class="ch-container">
     <div class="ch-row">
-      <div class="ch-hero-content">
-        {% if options.error_hero_content is not empty %}
-        {{ options.error_hero_content }}
-        {% endif %}
-      </div>
-        <div class="ch-hero-image ch-hero-slim-image">
-          <img src="{{theme.link}}/library/images/eyes-circles@2x.png" alt="two grahpic eyeballs with circles" style="max-width:450px" />
-        </div>
+      <div class="ch-col-xs-6">
+        <h1 class="title-1 text-yellow text-center">404</h1>
+                </div>
     </div>
   </div>
+  <div class="ch-hero-tools-filter1"></div>
+  <div class="ch-hero-tools-filter2"></div>
+  <img class="ch-hero-tools-pattern" src="https://www.chartinghockey.ca/wp-content/themes/es/library/images/triangles-layer@2x.png" alt="">
 </section>
-<section class="ch-text-info">
+<section class="xs-mt-50 xs-mb-50 sm-mt-100 sm-mb-100">
   <div class="ch-container">
     <div class="ch-row">
-      <div class="ch-text-info-left">
-          {% if options.error_main_content is not empty %}
-          {{ options.error_main_content }}
-          {% endif %}
-      </div>
-      <div class="ch-text-info-right">
-          {% if options.error_sidebar_content is not empty %}
-          {{ options.error_sidebar_content }}
-          {% endif %}
+      <div class="ch-col-xs-6 ch-col-sm-4 ch-offset-sm-1">
+
+        <h2 class="title-3 text-dark">Sorry! The page you are looking for is unavailable. Please use the nav to find your page.</h2>
       </div>
     </div>
-  </div>
-</section>
-<section class="ch-logo-cta ch-logo-cta-blue">
-  <div class="ch-container">
-    <div class="ch-row">
-      <div class="ch-logo-cta-left">
-          {% if options.call_out_content is not empty %}
-          {{ options.call_out_content }}
-          {% endif %}
-      </div>
-      <div class="ch-logo-cta-right">
-        <div class="ch-logo-cta-buttons">
-            {% if options.pricing_button %}
-            <a href="{{options.pricing_button.url}}" {{options.pricing_button.target}} class="ch-button ch-button-white ch-button-white-medium">{{options.pricing_button.text}}</a>
-            {% endif %}
-            {% if options.sales_button %}
-            <a href="{{options.sales_button.url}}" {{options.sales_button.target}} class="ch-button ch-button-green ch-button-green-medium">{{options.sales_button.text}}</a>
-            {% endif %}
-            <p>{{ options.short_description }}</p>
-        </div>
-      </div>
-    </div>
-    <div class="ch-logo-cta-logo"><img src="{{theme.link}}/library/images/sench-logo-icon@2x.png" alt="logo for sensu" /></div>
   </div>
 </section>
 {% endblock %}

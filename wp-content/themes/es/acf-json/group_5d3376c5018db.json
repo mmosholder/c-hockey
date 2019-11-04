@@ -554,6 +554,15 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5dbdfe5dcc95d": {
+                    "key": "layout_5dbdfe5dcc95d",
+                    "name": "latest_posts",
+                    "label": "Show Latest Posts",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -575,6 +584,20 @@
                 "operator": "!=",
                 "value": "page-templates\/template-viz-tools-page.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-templates\/template-non-patreon-viz-tools.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/template-daily-thread.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -590,5 +613,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571530885
+    "modified": 1572844853
 }

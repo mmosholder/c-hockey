@@ -117,6 +117,20 @@
                 "operator": "==",
                 "value": "page-templates\/template-viz-tools-page.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-non-patreon-viz-tools.php"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-templates\/template-non-patreon-viz-tools.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -127,5 +141,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1571498975
+    "modified": 1572844983
 }

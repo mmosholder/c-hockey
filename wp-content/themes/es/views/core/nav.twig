@@ -30,7 +30,18 @@
     <nav class="ch-nav-desktop {{ navClass }}">
       <ul class="list-unstyled flex">
         {% for item in menu.items %}
-          <li class="{{ item.current ? 'active' : '' }}"><a class="link-nav" href="{{item.link}}">{{item.title}}</a></li>
+          <li class="{{ item.current ? 'active' : '' }} {{ item.children ? '-has-dropdown' : ''}}">
+            <a class="link-nav" href="{{item.link}}">{{item.title}}</a>
+            {% if item.children is not empty %}
+              <div class="ch-nav-dropdown">
+                <ul class="list-unstyled">
+                  {% for child in item.children %}
+                    <li class="{{ child.current ? 'active' : '' }}"><a class="link-nav" href="{{child.link}}">{{child.title}}</a>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </li>
         {% endfor %}
       </ul>
     </nav>
@@ -65,7 +76,17 @@
                   <ul class="list-unstyled">
 
                 {% for item in menu.items %}
-                  <li class="{{ item.current ? 'active' : '' }}"><a class="link-mobile-nav" href="{{item.link}}">{{item.title}}</a></li>
+                  <li class="{{ item.current ? 'active' : '' }} {{ item.children ? 'has-dropdown' : ''}}"><a class="link-mobile-nav" href="{{item.link}}">{{item.title}}</a>
+                  {% if item.children is not empty %}
+                    <div class="ch-mobile-dropdown">
+                      <ul class="list-unstyled">
+                        {% for child in item.children %}
+                          <li class="{{ child.current ? 'active' : '' }}"><a class="link-mobile-nav" href="{{child.link}}">{{child.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
+                  </li>
                 {% endfor %}
 
                 </ul>

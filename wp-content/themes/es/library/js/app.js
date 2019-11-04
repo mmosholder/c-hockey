@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(7);
 
 
 /***/ }),
@@ -78,7 +78,7 @@ module.exports = __webpack_require__(6);
 
 window.$ = window.jQuery = __webpack_require__(2);
 __webpack_require__(3);
-__webpack_require__(11);
+__webpack_require__(6);
 
 /***/ }),
 /* 2 */
@@ -10746,16 +10746,6 @@ module.exports = g;
 /* 6 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ (function(module, exports) {
-
 (function () {
   console.log('alive');
   var navToggle = document.getElementById('navToggle');
@@ -10785,6 +10775,12 @@ module.exports = g;
     });
   }
 })();
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

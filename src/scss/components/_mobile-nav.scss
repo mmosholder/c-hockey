@@ -6,7 +6,7 @@
     align-items: center;
     position: relative;
 
-    @include mq($from: $breakpoint-small) {
+    @include mq($from: $breakpoint-medium) {
       display: none;
     }
 
@@ -56,6 +56,40 @@
               background-color: rgba($fill-yellow, 1);
               width: 100%;
             }
+          }
+        }
+
+        &.has-dropdown {
+
+          // &:after {
+          //   display: none;
+          // }
+
+          // > a:after {
+          //   display: inline-block;
+          //   margin: pxem(4) 0 0 pxem(6);
+          //   content: "";
+          //   width: 0;
+          //   height: 0;
+          //   border-style: solid;
+          //   border-width: 0 5px 8.7px 5px;
+          //   border-color: transparent transparent $fill-white transparent;
+          //   transform: rotate(180deg);
+          // }
+
+          .ch-mobile-dropdown {
+            // height: 0;
+            // padding: 5px 20px;
+            // transition: height 240ms $t-1;
+            // display: none;
+            margin: 5px 0 5px 15px;
+
+            // &:hover,
+            // &.-open {
+            //   height: 100%;
+            //   display: block;
+            //   transition: height 240ms $t-1;
+            // }
           }
         }
       }

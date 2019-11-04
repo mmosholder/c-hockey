@@ -28,6 +28,18 @@
     @include poly-fluid-sizing("font-size", $map);
   }
 
+  &-2-mono {
+    @include plex-mono;
+    @include font-smoothing;
+    $map: (
+      576px: 32px,
+      992px: 40px
+    );
+    line-height: 1.175;
+    letter-spacing: 0.8px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
   &-3 {
     @include roboto-bold;
     @include font-smoothing;
@@ -93,6 +105,18 @@
 
   &-18-bold {
     @include roboto-bold;
+    @include font-smoothing;
+    $map: (
+      576px: 16px,
+      992px: 18px
+    );
+    line-height: 1.35;
+    letter-spacing: 0.89px;
+    @include poly-fluid-sizing("font-size", $map);
+  }
+
+  &-18-italic {
+    @include roboto-bold-italic;
     @include font-smoothing;
     $map: (
       576px: 16px,
@@ -188,15 +212,22 @@
   &-nav {
     @include plex-mono;
     @include font-smoothing;
-    font-size: 18px;
     line-height: 1.27;
-    letter-spacing: 0.8px;
     text-decoration: none;
     color: rgba($fill-black, 1);
     transition: color 240ms $t-1;
+    font-size: 18px;
 
     &:hover {
       color: rgba($fill-black, 0.8);
+    }
+
+    @include mq($from: $breakpoint-medium) {
+      font-size: 16px;
+    }
+
+    @include mq($from: 1240px) {
+      font-size: 18px;
     }
   }
 

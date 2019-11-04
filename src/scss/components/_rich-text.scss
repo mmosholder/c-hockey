@@ -84,7 +84,7 @@
     + h6,
     + ul,
     + ol {
-      padding-top: pxem(20);
+      padding-top: pxem(40);
     }
   }
 
@@ -199,4 +199,26 @@
       @include poly-fluid-sizing("font-size", $map);
     }
   }
+
+  figure {
+    margin: 30px 0;
+    width: 100%;
+
+    img {
+      width: auto;
+    }
+  }
+
+  figcaption {
+    @include roboto-bold-italic;
+    @include font-smoothing;
+    font-size: 16px;
+    line-height: 1;
+    opacity: 0.56;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: pxem(705);
 }

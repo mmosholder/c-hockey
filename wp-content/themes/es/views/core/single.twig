@@ -13,13 +13,16 @@
     </div>
   </div>
 </section>
-<section class="ch-article">
-  {% for item in post.get_field('article_layout') %}
-    {% if item.acf_fc_layout == 'article_section_text_title' %}
-      {% include 'components/text-title.twig' %}
-    {% elseif item.acf_fc_layout == 'article_image' %}
-      {% include 'components/image.twig' %}
-    {% endif %}
-  {% endfor %}
+<section class="ch-article xs-pb-10 sm-pb-50">
+  <div class="ch-container">
+    <div class="ch-row">
+      <div class="ch-col-xs-6 ch-col-sm-4 ch-offset-sm-1">
+        <div class="ch-rich-text">
+          {{ post.content }}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+{% include 'components/cta.twig' %}
 {% endblock %}

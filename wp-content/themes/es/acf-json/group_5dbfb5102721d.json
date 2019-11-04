@@ -1,0 +1,55 @@
+{
+    "key": "group_5dbfb5102721d",
+    "title": "Archive Template",
+    "fields": [
+        {
+            "key": "field_5dbfb53c27711",
+            "label": "Hero Image",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "This image will show with some filters on top of it for an archive page (listing of blog posts). Image will be turned black and white if it's not and then overlayed with black\/purple and a pattern.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "242"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/template-daily-thread.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1572846726
+}
