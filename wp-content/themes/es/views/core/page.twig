@@ -31,6 +31,10 @@
       {% include 'components/content-repeater.twig' %}
     {% elseif item.acf_fc_layout == 'latest_posts' %}
       {% include 'components/latest-posts.twig' %}
+    {% elseif item.acf_fc_layout == 'text_image_block_with_wider_content' %}
+      {% include 'components/text-image-wide-content.twig' %}
+    {% elseif item.acf_fc_layout == 'hero_no_image' %}
+      {% include 'components/hero-no-image.twig' %}
     {% endif %}
   {% endfor %}
   {% include "components/cta.twig" %}

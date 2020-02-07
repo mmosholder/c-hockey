@@ -4,8 +4,8 @@
       <div class="ch-col-xs-6 xs-mb-20">
         <h2 class="title-2-mono text-dark text-center">Recent Articles</h2>
       </div>
-      <div class="ch-col-xs-6 ch-col-sm-2">
-        {% for post in latest_posts %}
+      {% for post in latest_posts %}
+        <div class="ch-col-xs-6 ch-col-sm-2 xs-mb-50 sm-mb-0">
           <a href="{{ post.link }}" class="ch-latest-item decoration-none">
             <img src="{{ post.thumbnail.src}}" alt="">
             <h3 class="text-20-medium text-dark">{{ post.title }}</h3>
@@ -15,8 +15,8 @@
             </div>
             <div class="inline-block text-18 text-dark link-grow xs-mt-10">Read More</div>
           </a>
-        {% endfor %}
-      </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>

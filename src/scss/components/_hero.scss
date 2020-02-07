@@ -1,8 +1,36 @@
 .ch-hero {
 
   h1 {
+    text-align: center;
+    width: 100%;
+
     @include mq($from: $breakpoint-medium) {
       text-align: right;
+      width: 58%;
+    }
+  }
+
+  &-no-image {
+    margin-bottom: pxem(25);
+
+    @include mq($from: $breakpoint-medium) {
+      margin-bottom: pxem(50);
+    }
+
+    .ch-container {
+      border-bottom: 3px solid $fill-purple;
+      padding-top: pxem(30);
+      padding-bottom: pxem(50);
+
+      @include mq($from: $breakpoint-medium) {
+        padding-top: pxem(50);
+        padding-bottom: pxem(75);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      width: 100%;
     }
   }
 

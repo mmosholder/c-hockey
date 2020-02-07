@@ -1,0 +1,37 @@
+{% if item.image_alignment == "Left" %}
+  <section class="ch-text-image -about -left xs-pb-50 xs-pt-50">
+    <div class="ch-container">
+      <div class="ch-row align-center">
+        <div class="ch-text-image-image ch-col-xs-6 ch-col-sm-2">
+          <img src="{{TimberImage(item.image).src}}" alt="{{item.image.alt}}"/>
+        </div>
+        <div class="ch-text-image-text ch-col-xs-6 ch-col-sm-4 xs-mt-20 sm-mt-20">
+          {% if item.title is not empty %}
+            <h2 class="title-2 text-dark xs-mb-20">{{ item.title }}</h2>
+          {% endif %}
+          {% if item.text is not empty %}
+            <div class="ch-rich-text">{{ item.text }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="ch-text-image -about xs-pt-30 xs-pb-30 sm-pb-50 sm-pt-50">
+    <div class="ch-container">
+      <div class="ch-row align-center">
+        <div class="ch-text-image-text ch-col-xs-6 ch-col-sm-2 xs-mt-20 sm-mt-20">
+          {% if item.title is not empty %}
+            <h2 class="title-2 text-dark xs-mb-20">{{ item.title }}</h2>
+          {% endif %}
+          {% if item.text is not empty %}
+            <div class="ch-rich-text">{{ item.text }}</div>
+          {% endif %}
+        </div>
+        <div class="ch-text-image-image ch-col-xs-6 ch-col-sm-2">
+          <img src="{{TimberImage(item.image).src}}" alt="{{item.image.alt}}"/>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
